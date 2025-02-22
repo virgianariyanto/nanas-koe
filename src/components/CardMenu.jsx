@@ -50,7 +50,7 @@ const CardMenu = () => {
                             <img src={item.image} alt={item.name} className="w-full h-60 object-cover rounded-t-lg hover:scale-105 duration-200" />
                             <div className="p-3.5 flex justify-between items-center">
                                 <h2 className="text-lg font-bold text-orange-400">{item.name}</h2>
-                                <p className="text-sm text-slate-700 bg-green-500 py-0.5 px-1 text-white rounded-2xl"><b>{item.price}</b></p>
+                                <p className="text-sm text-white bg-green-500 py-0.5 px-1 rounded-2xl"><b>{item.price}</b></p>
                             </div>
                         </div>
                     ))}

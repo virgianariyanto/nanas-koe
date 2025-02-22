@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HeadlineCards from './components/HeadlineCards';
 import CardMenu from './components/CardMenu';
+import Testimony from './components/Testimony';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Hero />
           <HeadlineCards />
           <CardMenu />
+          <Testimony />
       </div>
     </>
   )
