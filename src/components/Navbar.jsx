@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from "react-icons/ai";
-import { BsFillCartFill } from "react-icons/bs";
+import { BsFillCartFill, BsWhatsapp } from "react-icons/bs";
 import { MdDeliveryDining, MdOutlineMenuBook, MdFavorite, MdCall } from "react-icons/md";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const handleWhatsAppClick = () => {
+    const message = "Hello, I want to order food.";
+    const phone = "+6285704822627";
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  }
 
   return (
     <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4 fixed top-0 left-0 right-0 bg-white z-50">
@@ -14,7 +19,7 @@ const Navbar = () => {
           <AiOutlineMenu size={30} />
         </div>
         <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-          Best <span className="font-bold">Eats</span>
+          Nanas<span className="font-bold">Koe</span>
         </h1>
         <div className="hidden lg:flex items-center rounded-full p-1 bg-slate-200 text-[14px]">
           <p className="bg-black p-1 rounded-full text-white">Delivery</p>
@@ -33,8 +38,9 @@ const Navbar = () => {
       </div>
 
       {/* Cart Button */}
-      <button className="bg-black text-white hidden md:flex items-center p-2 rounded-full">
-        <BsFillCartFill size={20} className="mr-1" /> Cart
+      <button onClick={handleWhatsAppClick} className="bg-green-500 hover:bg-green-600 transition-all cursor-pointer text-white hidden md:flex items-center py-2 px-3 rounded-full">
+        {/* <BsFillCartFill size={20} className="mr-1" /> Cart */}
+        <BsWhatsapp size={20} className="mr-1" /> Whatsapp
       </button>
 
       {/* Mobile Menu */}
@@ -59,7 +65,7 @@ const Navbar = () => {
           className="top-4 right-4 absolute cursor-pointer text-slate-600"
         />
         <h2 className="text-3xl p-4">
-          Best <span className="font-bold">Eats</span>
+          Nanas<span className="font-bold">Koe</span>
         </h2>
 
         <nav>

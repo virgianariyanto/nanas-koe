@@ -3,6 +3,35 @@ import { useState, useEffect } from "react";
 
 const Testimony = () => {
     const [imageUrl, setImageUrl] = useState("");
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const testimonials = [
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
+            name: "John Doe",
+            position: "CEO of Company"
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
+            name: "Jane Smith",
+            position: "Marketing Director"
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
+            name: "Michael Brown",
+            position: "Product Manager"
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
+            name: "Sarah Johnson",
+            position: "Designer"
+        },
+        {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
+            name: "Robert Wilson",
+            position: "Developer"
+        }
+    ];
 
     useEffect(() => {
         fetch("https://randomuser.me/api/")
@@ -11,65 +40,111 @@ const Testimony = () => {
             .catch(error => console.error("Error:", error));
     }, []);
 
-    return(
+    const nextSlide = () => {
+        setCurrentSlide((prev) => 
+            prev === testimonials.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            nextSlide();
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
         <div className="bg-slate-900 py-12">
             <div className="max-w-[1640px] mx-auto px-4">
-                <h1 className="text-orange-500 font-bold text-4xl text-center">What Our Customers Say</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    <div className="bg-white rounded-lg p-6 shadow-lg">
-                        <p className="text-slate-900 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae</p>
-                        <div className="flex items-center mt-4">
-                            <img src={imageUrl} alt="user" className="w-12 h-12 object-cover rounded-full" />
-                            <div className="ml-4">
-                                <h2 className="text-lg font-bold text-orange-500">John Doe</h2>
-                                <p className="text-sm text-slate-700">CEO of Company</p>
-                            </div>
+                <h1 className="text-orange-600 font-bold text-4xl text-center mb-8">
+                    What Our Customers Say
+                </h1>
+                <div className="relative">
+                    {/* Slide Container */}
+                    <div className="overflow-hidden">
+                        <div className="relative h-[300px]"> {/* Atur tinggi sesuai kebutuhan */}
+                            {testimonials.map((testimonial, index) => (
+                                <div
+                                    key={index}
+                                    className={`absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out ${
+                                        currentSlide === index 
+                                            ? "opacity-100 animate-slide-in" 
+                                            : "opacity-0 animate-slide-out"
+                                    }`}
+                                >
+                                    <div className="bg-white rounded-lg p-6 shadow-lg w-full max-w-md mx-auto">
+                                        <p className="text-slate-900 text-lg">
+                                            "{testimonial.text}"
+                                        </p>
+                                        <div className="flex items-center mt-4">
+                                            <img 
+                                                src={imageUrl} 
+                                                alt="user" 
+                                                className="w-12 h-12 object-cover rounded-full" 
+                                            />
+                                            <div className="ml-4">
+                                                <h2 className="text-lg font-bold text-orange-500">
+                                                    {testimonial.name}
+                                                </h2>
+                                                <p className="text-sm text-slate-700">
+                                                    {testimonial.position}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg">
-                        <p className="text-slate-900 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae</p>
-                        <div className="flex items-center mt-4">
-                            <img src={imageUrl} alt="user" className="w-12 h-12 object-cover rounded-full" />
-                            <div className="ml-4">
-                                <h2 className="text-lg font-bold text-orange-500">John Doe</h2>
-                                <p className="text-sm text-slate-700">CEO of Company</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg">
-                        <p className="text-slate-900 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae</p>
-                        <div className="flex items-center mt-4">
-                            <img src={imageUrl} alt="user" className="w-12 h-12 object-cover rounded-full" />
-                            <div className="ml-4">
-                                <h2 className="text-lg font-bold text-orange-500">John Doe</h2>
-                                <p className="text-sm text-slate-700">CEO of Company</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg">
-                        <p className="text-slate-900 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae</p>
-                        <div className="flex items-center mt-4">
-                            <img src={imageUrl} alt="user" className="w-12 h-12 object-cover rounded-full" />
-                            <div className="ml-4">
-                                <h2 className="text-lg font-bold text-orange-500">John Doe</h2>
-                                <p className="text-sm text-slate-700">CEO of Company</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white rounded-lg p-6 shadow-lg">
-                        <p className="text-slate-900 text-lg">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae</p>
-                        <div className="flex items-center mt-4">
-                            <img src={imageUrl} alt="user" className="w-12 h-12 object-cover rounded-full" />
-                            <div className="ml-4">
-                                <h2 className="text-lg font-bold text-orange-500">John Doe</h2>
-                                <p className="text-sm text-slate-700">CEO of Company</p>
-                            </div>
-                        </div>
+
+                    {/* Dots Indicator */}
+                    <div className="flex justify-center -mt-14 space-x-2">
+                        {testimonials.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                    currentSlide === index ? 'bg-orange-500 scale-125' : 'bg-gray-300'
+                                }`}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
+
+            {/* CSS Animasi Inline */}
+            <style jsx>{`
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes slideOut {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(-100%);
+                        opacity: 0;
+                    }
+                }
+
+                .animate-slide-in {
+                    animation: slideIn 0.7s ease-in-out forwards;
+                }
+
+                .animate-slide-out {
+                    animation: slideOut 0.7s ease-in-out forwards;
+                }
+            `}</style>
         </div>
-    )
-}
+    );
+};
 
 export default Testimony;
