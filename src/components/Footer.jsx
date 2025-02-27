@@ -3,12 +3,15 @@ import { MdLocationOn,MdCall } from "react-icons/md";
 
 const Footer = () => {
     return(
-        <div className="bg-orange-900 py-8">
+        <div className="bg-[#462f27] py-4">
             <div className="max-w-[1640px] mx-auto px-4">
                 <div className="flex flex-wrap justify-between items-center">
                     <div>
-                        {/* <h1 className="text-orange-500 font-bold text-2xl">Foodies</h1> */}
-                        <p className="text-white">Dari Dapur Kami ke Meja Anda.</p>
+                        <h1 className="text-orange-500 text-2xl">Nana's<span className="font-bold">Koe.</span></h1>
+                        <p className="text-white">Dari Dapur Kami untuk Meja Anda.</p>
+                    </div>
+                    <div className="hidden lg:block">
+                        <p className="text-center text-white">© 2025 Nana's Koe</p>
                     </div>
                     <div>
                         <ul className="flex flex-col">
@@ -23,9 +26,6 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    </div>
-                <div className="mt-8">
-                    <p className="text-center text-white">© 2025 Nanas Koe</p>
                 </div>
             </div>
         </div>

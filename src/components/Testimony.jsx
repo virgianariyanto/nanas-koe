@@ -54,9 +54,9 @@ const Testimony = () => {
     }, []);
 
     return (
-        <div className="bg-slate-900 py-12">
+        <div className="bg-[#0c3834] py-12">
             <div className="max-w-[1640px] mx-auto px-4">
-                <h1 className="text-orange-600 font-bold text-4xl text-center mb-8">
+                <h1 className="text-[#A67C6D] font-bold text-4xl text-center mb-8">
                     What Our Customers Say
                 </h1>
                 <div className="relative">
@@ -72,8 +72,8 @@ const Testimony = () => {
                                             : "opacity-0 animate-slide-out"
                                     }`}
                                 >
-                                    <div className="bg-white rounded-lg p-6 shadow-lg w-full max-w-md mx-auto">
-                                        <p className="text-slate-900 text-lg">
+                                    <div className="bg-[#687a79] rounded-lg p-6 shadow-lg w-full max-w-md mx-auto">
+                                        <p className="text-slate-200 text-lg">
                                             "{testimonial.text}"
                                         </p>
                                         <div className="flex items-center mt-4">
@@ -83,10 +83,10 @@ const Testimony = () => {
                                                 className="w-12 h-12 object-cover rounded-full" 
                                             />
                                             <div className="ml-4">
-                                                <h2 className="text-lg font-bold text-orange-500">
+                                                <h2 className="text-lg font-bold text-[#122624]">
                                                     {testimonial.name}
                                                 </h2>
-                                                <p className="text-sm text-slate-700">
+                                                <p className="text-sm text-slate-300">
                                                     {testimonial.position}
                                                 </p>
                                             </div>
@@ -103,7 +103,7 @@ const Testimony = () => {
                             <div
                                 key={index}
                                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                    currentSlide === index ? 'bg-orange-500 scale-125' : 'bg-gray-300'
+                                    currentSlide === index ? 'bg-[#A67C6D] scale-125' : 'bg-gray-300'
                                 }`}
                             />
                         ))}
