@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { FaUser } from "react-icons/fa";
 
 const Testimony = () => {
     const [imageUrl, setImageUrl] = useState("");
@@ -7,9 +8,9 @@ const Testimony = () => {
 
     const testimonials = [
         {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
-            name: "John Doe",
-            position: "CEO of Company"
+            text: "Kue nya enak enak dan banyak varian. Bersih, harga ekonomis.cocok buat oleh2 dan suguhan. Instansi yg mengadakan acara pertemuan atau cara keluarga",
+            name: "Em Arifin PWB",
+            position: "Pembeli"
         },
         {
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
@@ -77,11 +78,7 @@ const Testimony = () => {
                                             "{testimonial.text}"
                                         </p>
                                         <div className="flex items-center mt-4">
-                                            <img 
-                                                src={imageUrl} 
-                                                alt="user" 
-                                                className="w-12 h-12 object-cover rounded-full" 
-                                            />
+                                        <FaUser size={25} />
                                             <div className="ml-4">
                                                 <h2 className="text-lg font-bold text-[#122624]">
                                                     {testimonial.name}

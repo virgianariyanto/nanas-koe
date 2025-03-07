@@ -2,130 +2,128 @@ export const data = [
     {
       id: 1,
       name: 'Kue Soes',
-      category: 'burger',
+      category: 'snack',
       image:
         './image/IMG_8959.jpeg',
-      price: '$$$$',
+      price: '5K/each',
+      rate: 'murah'
     },
     {
       id: 2,
-      name: 'Bacon Cheeseburger',
-      category: 'burger',
+      name: 'Kastengel',
+      category: 'kuekering',
       image:
         './image/IMG_8603.jpg',
-      price: '$',
+      price: '80K',
+      rate: 'mahal'
     },
     {
       id: 3,
-      name: 'Mushroom Burger',
-      category: 'burger',
+      name: 'Palm Cheese',
+      category: 'kuekering',
       image:
         './image/IMG_6158.jpg',
-      price: '$$',
+      price: '80K',
+      rate: 'mahal'
     },
     {
       id: 4,
-      name: 'Loaded Burger',
-      category: 'burger',
+      name: 'Putri Salju',
+      category: 'kuekering',
       image:
         './image/IMG_8602.jpg',
-      price: '$$$',
+      price: '80K',
+      rate: 'mahal'
     },
     {
       id: 5,
-      name: 'Feta & Spinnach',
-      category: 'pizza',
+      name: 'Bolen Pisang',
+      category: 'snack',
       image:
         './image/IMG_5105.jpg',
-      price: '$$',
+      price: '5K/each',
+      rate: 'murah'
     },
     {
       id: 6,
-      name: 'Supreme Pizza',
-      category: 'pizza',
+      name: 'Salad Buah',
+      category: 'cake&bakery',
       image:
         './image/IMG_4493.JPG',
-      price: '$$$',
+      price: '15K',
+      rate: 'sedang'
     },
     {
       id: 7,
-      name: 'Meat Lovers',
-      category: 'pizza',
+      name: 'Strudel',
+      category: 'snack',
       image:
         './image/phonto.JPG',
-      price: '$$$$',
+      price: '50K',
+      rate: 'sedang'
     },
     {
       id: 8,
-      name: 'Cheese Pizza',
-      category: 'pizza',
+      name: 'Nastar',
+      category: 'kuekering',
       image:
-        'https://images.unsplash.com/photo-1548369937-47519962c11a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZXNlJTIwcGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$',
+        './image/IMG_8585.jpg',
+      price: '85K',
+      rate: 'mahal'
     },
     {
       id: 9,
-      name: 'Kale Salad',
-      category: 'salad',
+      name: 'Donat Kentang',
+      category: 'snack',
       image:
-        'https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$',
+        './image/IMG_2013.jpg',
+      price: '5K/each',
+      rate: 'murah'
     },
     {
       id: 10,
-      name: 'Ceasar Salad',
-      category: 'salad',
+      name: 'Custom Cake',
+      category: 'snack',
       image:
-        'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$$',
+        './image/5b038f9c-568d-431d-aa44-478fa85f2153.JPG',
+      price: '50K',
+      rate: 'sedang'
     },
     {
       id: 11,
-      name: 'Loaded Salad',
-      category: 'salad',
+      name: 'Kentang Mustofa',
+      category: 'snack',
       image:
-        'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$$$',
+        './image/2b874e80-f690-4ffb-8241-f368e98c5698.JPG',
+      price: '60k',
+      rate: 'mahal'
     },
     {
       id: 12,
-      name: 'Fruit Salad',
-      category: 'salad',
+      name: 'Custom Pizza',
+      category: 'cake&bakery',
       image:
-        'https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$',
+        './image/IMG_3515.jpg',
+      price: '50K',
+      rate: 'sedang'
     },
     {
       id: 13,
-      name: 'Wings',
-      category: 'chicken',
+      name: 'Custom Pizza',
+      category: 'cake&bakery',
       image:
-        'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$',
+        './image/custom-pizza.jpg',
+      price: '50K',
+      rate: 'sedang'
     },
     {
-      id: 14,
-      name: 'Baked Chicken',
-      category: 'chicken',
+      id: 12,
+      name: 'Bomboloni',
+      category: 'snack',
       image:
-        'https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
-      price: '$$$$',
-    },
-    {
-      id: 15,
-      name: 'Chicken Tenders',
-      category: 'chicken',
-      image:
-        'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$',
-    },
-    {
-      id: 16,
-      name: 'Chicken Kabob',
-      category: 'chicken',
-      image:
-        'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-      price: '$$$',
+        './image/bomboloni.jpg',
+      price: '5k/each',
+      rate: 'murah'
     },
   ];
   

@@ -10,8 +10,8 @@ const CardMenu = () => {
     }
 
     // Filter price of food
-    const filterPrice = (harga) => {
-        setMenus(data.filter((item) => item.price === harga));
+    const filterRate = (rate) => {
+        setMenus(data.filter((item) => item.rate === rate));
     }
 
     return(
@@ -25,9 +25,9 @@ const CardMenu = () => {
                     <p className="font-bold text-slate-300">Filter Type</p>
                     <div className="flex flex-wrap">
                         <button onClick={() => setMenus(data)} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D] hover:text-white">All</button>
-                        <button onClick={() => filterType('burger')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Food</button>
-                        <button onClick={() => filterType('pizza')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Cake</button> 
-                        <button onClick={() => filterType('salad')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Bakery</button> 
+                        <button onClick={() => filterType('kuekering')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Kue Kering</button>
+                        <button onClick={() => filterType('snack')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Snack</button> 
+                        <button onClick={() => filterType('cake&bakery')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">Cake & Bakery</button> 
                     </div>
                 </div>
 
@@ -36,9 +36,9 @@ const CardMenu = () => {
                     <p className="font-bold text-slate-300">Filter Price</p>
                     <div className="flex flex-wrap">
                         <button onClick={() => setMenus(data)} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">All</button>
-                        <button onClick={() => filterPrice('$')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">$</button>
-                        <button onClick={() => filterPrice('$$')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">$$</button> 
-                        <button onClick={() => filterPrice('$$$')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">$$$</button> 
+                        <button onClick={() => filterRate('murah')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">10K</button>
+                        <button onClick={() => filterRate('sedang')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">50K</button> 
+                        <button onClick={() => filterRate('mahal')} className="px-3 py-0.5 m-1 rounded-2xl border border-[#A67C6D] text-[#A67C6D] hover:bg-[#A67C6D]  hover:text-white">100K</button> 
                     </div>
                 </div>    
             </div>
