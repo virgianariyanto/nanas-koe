@@ -3,8 +3,16 @@ import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose, AiFillTag } from "react
 import { BsFillCartFill, BsWhatsapp } from "react-icons/bs";
 import { MdDeliveryDining, MdOutlineMenuBook, MdFavorite, MdCall } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ onSearchChange }) => {
   const [nav, setNav] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    const keyword = e.target.value;
+    setSearchTerm(keyword);
+    onSearchChange(keyword); // Kirim data pencarian ke CardMenu
+  }
+
   const handleWhatsAppClick = () => {
     const message = "Halo, Saya mau order.";
     const phone = "+6285704822627";
@@ -35,6 +43,8 @@ const Navbar = () => {
           type="text"
           className="p-2 focus:outline-none w-full text-slate-900"
           placeholder="search.."
+          value={searchTerm}
+          onChange={handleSearch} // Jalankan fungsi saat input berubah
         />
       </div>
 

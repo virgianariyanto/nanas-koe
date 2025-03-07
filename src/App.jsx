@@ -8,14 +8,15 @@ import Testimony from './components/Testimony';
 import Footer from './components/Footer';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
       <div>
-          <Navbar />
+          <Navbar onSearchChange={setSearchTerm}  />
           <Hero />
           <HeadlineCards />
-          <CardMenu />
+          <CardMenu searchTerm={searchTerm} />
           <Testimony />
           <Footer />
       </div>

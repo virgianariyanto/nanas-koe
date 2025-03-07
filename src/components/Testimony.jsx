@@ -17,21 +17,6 @@ const Testimony = () => {
             name: "Jane Smith",
             position: "Marketing Director"
         },
-        {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
-            name: "Michael Brown",
-            position: "Product Manager"
-        },
-        {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
-            name: "Sarah Johnson",
-            position: "Designer"
-        },
-        {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in nulla vitae",
-            name: "Robert Wilson",
-            position: "Developer"
-        }
     ];
 
     useEffect(() => {
@@ -107,10 +92,10 @@ const Testimony = () => {
                     </div>
                 </div>
             </div>
-
             {/* CSS Animasi Inline */}
-            <style jsx>{`
-                @keyframes slideIn {
+            <style>
+                {`
+                    @keyframes slideIn {
                     from {
                         transform: translateX(100%);
                         opacity: 0;
@@ -119,27 +104,13 @@ const Testimony = () => {
                         transform: translateX(0);
                         opacity: 1;
                     }
-                }
-
-                @keyframes slideOut {
-                    from {
-                        transform: translateX(0);
-                        opacity: 1;
                     }
-                    to {
-                        transform: translateX(-100%);
-                        opacity: 0;
-                    }
-                }
 
-                .animate-slide-in {
+                    .animate-slide-in {
                     animation: slideIn 0.7s ease-in-out forwards;
-                }
-
-                .animate-slide-out {
-                    animation: slideOut 0.7s ease-in-out forwards;
-                }
-            `}</style>
+                    }
+                `}
+            </style>
         </div>
     );
 };
